@@ -1,0 +1,8 @@
+# This is a Red Light Green Light policy file for the GNU moxie-elf
+# toolchain.
+
+{ "result": "FAIL", "id": "^.*vrp47.*scan-tree-dump-times.*1$" }
+{ "result": "FAIL", "id": "^.*vrp47.*scan-tree-dump-times.*0$" }
+
+{ "result": "FAIL", "id": "gcc.dg/tree-ssa/ssa-dom-thread-7.c scan-tree-dump-not vrp2 \"Jumps threaded\"" }
+

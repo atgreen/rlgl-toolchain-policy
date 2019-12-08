@@ -1,0 +1,5 @@
+# This is a Red Light Green Light policy file for the GNU moxie-elf
+# toolchain.
+
+# A fail is a fail
+{ "result": "FAIL" }
