@@ -3,7 +3,3 @@
 
 # A pass is a pass
 { "result": "PASS" }
-
-# An XFAIL is also a pass, as we're telling DejaGnu directly that
-# we're OK with this failure.
-{ "result": "XFAIL" }

@@ -1,6 +1,10 @@
 # This is a Red Light Green Light policy file for the GNU moxie-elf
 # toolchain.
 
+# Let all DejaGnu XFAIL results pass through as XFAILs.
+{ "result": "XFAIL" }
+
+
 { "result": "FAIL", "id": "^.*vrp47.*scan-tree-dump-times.*1$" }
 { "result": "FAIL", "id": "^.*vrp47.*scan-tree-dump-times.*0$" }
 
