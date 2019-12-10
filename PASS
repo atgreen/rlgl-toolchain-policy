@@ -3,3 +3,8 @@
 
 # A pass is a pass
 { "result": "PASS" }
+
+# XFAIL results from DejaGnu are uninteresting to us at this level.
+# Let's mark them as PASS results in order to give them visibility,
+# but distinguish them from rlgl XFAILs.
+{ "result": "XFAIL" }
