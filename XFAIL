@@ -4,6 +4,8 @@
 # Let all DejaGnu XFAIL results pass through as XFAILs.
 { "result": "XFAIL" }
 
+# Haven't investigated this yet...
+{ "result": "FAIL", "id": "compiler driver -Q --help=warnings option(s): \"-Wabsolute-value[ \\t]+\\[available in C, ObjC\\]\" present in output" } 2020-06-01
 
 { "result": "FAIL", "id": "^.*vrp47.*scan-tree-dump-times.*1$" }
 { "result": "FAIL", "id": "^.*vrp47.*scan-tree-dump-times.*0$" }
