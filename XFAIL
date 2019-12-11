@@ -29,10 +29,22 @@
 
 { "result": "FAIL", "id": "gcc.dg/tree-ssa/ssa-dom-thread-7.c scan-tree-dump-not dom3 \"Jumps threaded\"" } 2020-06-01
 
+
+# ------------------------------------------------------------------------------------------
+# This test program is giving an illegal instruction...
+
+# spawn moxie-elf-run ./loop-interchange-1b.exe
+# program stopped with signal 4 (Illegal instruction)
+
+# ...because memset is stomping over the stack.  Need to add this to
+# test case:
+# /* { dg-skip-if "too big data segment" { visium-*-* moxie-*-* } } */
+
+{ "result": "FAIL", "id": "gcc.dg/tree-ssa/loop-interchange-1b.c execution test" } 2020-06-01
+
 # ------------------------------------------------------------------------------------------
 # Set baseline failures.   These have not been investigated yet.
 
-{ "result": "FAIL", "id": "gcc.dg/tree-ssa/loop-interchange-1b.c execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/tree-ssa/loop-interchange-1.c execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/tree-ssa/loop-1.c scan-assembler-times foo 5" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/tree-ssa/builtin-sprintf.c execution test" } 2020-06-01
