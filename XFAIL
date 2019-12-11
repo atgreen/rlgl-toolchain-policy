@@ -43,10 +43,20 @@
 { "result": "FAIL", "id": "gcc.dg/tree-ssa/loop-interchange-1b.c execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/tree-ssa/loop-interchange-1.c execution test" } 2020-06-01
 
+
+# ------------------------------------------------------------------------------------------
+# This test needs updating for moxie.
+#
+# It's testing loop unwinding, expecting to see a call to 'foo' 5 times.
+# moxie places the target in a register, so we should really be checking for
+# 5 jsr instructions.
+
+{ "result": "FAIL", "id": "gcc.dg/tree-ssa/loop-1.c scan-assembler-times foo 5" } 2020-06-01
+
+
 # ------------------------------------------------------------------------------------------
 # Set baseline failures.   These have not been investigated yet.
 
-{ "result": "FAIL", "id": "gcc.dg/tree-ssa/loop-1.c scan-assembler-times foo 5" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/tree-ssa/builtin-sprintf.c execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none -fpic execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -Os -fpic execution test" } 2020-06-01
