@@ -32,8 +32,6 @@
 # ------------------------------------------------------------------------------------------
 # Set baseline failures.   These have not been investigated yet.
 
-{ "result": "FAIL", "id": "compiler driver -Q --help=warnings option(s): \"-Wabsolute-value[ \\t]+\\[available in C, ObjC\\]\" present in output" } 2020-06-01
-{ "result": "FAIL", "id": "compiler driver -Q --help=warnings option(s): \"-Wabsolute-value[ \\t]+\\[available in C, ObjC\\]\" present in output" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/tree-ssa/loop-interchange-1b.c execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/tree-ssa/loop-interchange-1.c execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/tree-ssa/loop-1.c scan-assembler-times foo 5" } 2020-06-01
