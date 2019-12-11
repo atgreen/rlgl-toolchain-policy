@@ -53,6 +53,14 @@
 
 { "result": "FAIL", "id": "gcc.dg/tree-ssa/loop-1.c scan-assembler-times foo 5" } 2020-06-01
 
+# ------------------------------------------------------------------------------------------
+# This looks like a misaligned memory access, but I haven't investigated yet.
+
+# spawn moxie-elf-run ./pr37868.exe
+# sim-core.c:424: assertion failed - (addr & (nr_bytes - 1)) == 0
+# FAIL: gcc.dg/torture/pr37868.c   -O0  execution test
+
+{ "result": "FAIL", "id": "gcc.dg/torture/pr37868.c   -O0  execution test" } 2020-06-01
 
 # ------------------------------------------------------------------------------------------
 # Set baseline failures.   These have not been investigated yet.
@@ -73,7 +81,6 @@
 { "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -O2  execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -O1  execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -O0  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/torture/pr37868.c   -O0  execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/plugin/must-tail-call-1.c -fplugin=./must_tail_call_plugin.so (test for excess errors)" } 2020-06-01
 { "result": "FAIL", "id": "c-c++-common/spec-barrier-1.c  -Wc++-compat  (test for excess errors)" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/strlenopt-81.c (test for excess errors)" } 2020-06-01
