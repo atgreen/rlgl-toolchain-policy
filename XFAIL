@@ -84,6 +84,14 @@
 { "result": "FAIL", "id": "c-c++-common/spec-barrier-1.c  -Wc++-compat  (test for excess errors)" } 2020-06-01
 
 # ------------------------------------------------------------------------------------------
+# Need to add sibcall_epilogue pattern to moxie machine description
+
+# /root/gcc/gcc/testsuite/gcc.dg/plugin/must-tail-call-1.c: In function 'caller':
+# /root/gcc/gcc/testsuite/gcc.dg/plugin/must-tail-call-1.c:14:10: error: cannot tail-call: machine description does not have a sibcall_epilogue instruction pattern
+
+{ "result": "FAIL", "id": "gcc.dg/plugin/must-tail-call-1.c -fplugin=./must_tail_call_plugin.so (test for excess errors)" } 2020-06-01
+
+# ------------------------------------------------------------------------------------------
 # Set baseline failures.   These have not been investigated yet.
 
 { "result": "FAIL", "id": "gcc.dg/tree-ssa/builtin-sprintf.c execution test" } 2020-06-01
@@ -102,7 +110,6 @@
 { "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -O2  execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -O1  execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -O0  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/plugin/must-tail-call-1.c -fplugin=./must_tail_call_plugin.so (test for excess errors)" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/strlenopt-81.c (test for excess errors)" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/sibcall-9.c execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/sibcall-10.c execution test" } 2020-06-01
