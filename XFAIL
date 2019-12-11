@@ -63,6 +63,27 @@
 { "result": "FAIL", "id": "gcc.dg/torture/pr37868.c   -O0  execution test" } 2020-06-01
 
 # ------------------------------------------------------------------------------------------
+# speculation barrier...
+
+# This gives warning output like...
+# spec-barrier-1.c:31:3: warning: this target does not define a speculation barrier; your program will still execute correctly, but incorrect speculation may not be be restricted
+#
+# Looking at the test code, it reads:
+#
+# /* Test that __builtin_speculation_safe_value returns the correct value.  */
+# /* This test will cause an unfiltered warning to be emitted on targets
+#    that have not implemented support for speculative execution
+#    barriers.  They should fix that rather than disabling this
+#    test.  */
+#
+# It looks like we just add the following to moxie.c:
+#
+#undef  TARGET_HAVE_SPECULATION_SAFE_VALUE
+#define TARGET_HAVE_SPECULATION_SAFE_VALUE speculation_safe_value_not_needed
+
+{ "result": "FAIL", "id": "c-c++-common/spec-barrier-1.c  -Wc++-compat  (test for excess errors)" } 2020-06-01
+
+# ------------------------------------------------------------------------------------------
 # Set baseline failures.   These have not been investigated yet.
 
 { "result": "FAIL", "id": "gcc.dg/tree-ssa/builtin-sprintf.c execution test" } 2020-06-01
@@ -82,7 +103,6 @@
 { "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -O1  execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -O0  execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/plugin/must-tail-call-1.c -fplugin=./must_tail_call_plugin.so (test for excess errors)" } 2020-06-01
-{ "result": "FAIL", "id": "c-c++-common/spec-barrier-1.c  -Wc++-compat  (test for excess errors)" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/strlenopt-81.c (test for excess errors)" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/sibcall-9.c execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/sibcall-10.c execution test" } 2020-06-01
