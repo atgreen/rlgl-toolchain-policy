@@ -23,11 +23,17 @@
 { "result": "FAIL", "id": "gcc.dg/attr-vector_size.c (internal compiler error)" } 2020-06-01
 
 # ------------------------------------------------------------------------------------------
+# The moxie machine description doesn't include casesi or tablejump patterns, which this
+# test assumes exist.   We can either ignore this test the the test source header, or
+# implement backend support (this is the correct option!).
+
+{ "result": "FAIL", "id": "gcc.dg/tree-ssa/ssa-dom-thread-7.c scan-tree-dump-not dom3 \"Jumps threaded\"" } 2020-06-01
+
+# ------------------------------------------------------------------------------------------
 # Set baseline failures.   These have not been investigated yet.
 
 { "result": "FAIL", "id": "compiler driver -Q --help=warnings option(s): \"-Wabsolute-value[ \\t]+\\[available in C, ObjC\\]\" present in output" } 2020-06-01
 { "result": "FAIL", "id": "compiler driver -Q --help=warnings option(s): \"-Wabsolute-value[ \\t]+\\[available in C, ObjC\\]\" present in output" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/tree-ssa/ssa-dom-thread-7.c scan-tree-dump-not dom3 \"Jumps threaded\"" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/tree-ssa/loop-interchange-1b.c execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/tree-ssa/loop-interchange-1.c execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/tree-ssa/loop-1.c scan-assembler-times foo 5" } 2020-06-01
