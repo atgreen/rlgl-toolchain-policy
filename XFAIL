@@ -1,7 +1,30 @@
 # This is a Red Light Green Light policy file for the GNU moxie-elf
 # toolchain.
 
+# ------------------------------------------------------------------------------------------
+# $ moxie-elf-gcc attr-vector_size.c
+# attr-vector_size.c:20:1: internal compiler error: in layout_type, at stor-layout.c:2429
+#    20 | DEFVEC (extern, 29);
+#       | ^~~~~~
+# Please submit a full bug report,
+# with preprocessed source if appropriate.
+# See <https://gcc.gnu.org/bugs/> for instructions.
+
+# Max alignment on 32-bit ELF is 1<<28 bits.  char vectors are aligned to the vector size.  
+# When the vector length exceeds the max alignment , the align is set to '0' and we
+# get this ICE.   We can implement a target hook to set alignment sizes, or perhaps
+# consider a broader correction to the compiler.
+
+{ "result": "FAIL", "id": "gcc.dg/attr-vector_size.c (test for excess errors)" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.dg/attr-vector_size.c ILP32 (test for errors, line 66)" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.dg/attr-vector_size.c ILP32 (test for errors, line 64)" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.dg/attr-vector_size.c ILP32 (test for errors, line 39)" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.dg/attr-vector_size.c ILP32 (test for errors, line 37)" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.dg/attr-vector_size.c (internal compiler error)" } 2020-06-01
+
+# ------------------------------------------------------------------------------------------
 # Set baseline failures.   These have not been investigated yet.
+
 { "result": "FAIL", "id": "compiler driver -Q --help=warnings option(s): \"-Wabsolute-value[ \\t]+\\[available in C, ObjC\\]\" present in output" } 2020-06-01
 { "result": "FAIL", "id": "compiler driver -Q --help=warnings option(s): \"-Wabsolute-value[ \\t]+\\[available in C, ObjC\\]\" present in output" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/tree-ssa/ssa-dom-thread-7.c scan-tree-dump-not dom3 \"Jumps threaded\"" } 2020-06-01
@@ -40,12 +63,6 @@
 { "result": "FAIL", "id": "gcc.dg/cleanup-13.c execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/cleanup-12.c execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/builtin-apply2.c execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/attr-vector_size.c (test for excess errors)" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/attr-vector_size.c ILP32 (test for errors, line 66)" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/attr-vector_size.c ILP32 (test for errors, line 64)" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/attr-vector_size.c ILP32 (test for errors, line 39)" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/attr-vector_size.c ILP32 (test for errors, line 37)" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/attr-vector_size.c (internal compiler error)" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/Wstringop-overflow-25.c  (test for warnings, line 319)" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/Wstringop-overflow-25.c  (test for warnings, line 318)" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/Wstringop-overflow-25.c  (test for warnings, line 317)" } 2020-06-01
