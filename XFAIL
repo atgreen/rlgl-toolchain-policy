@@ -153,6 +153,15 @@
 { "result": "FAIL", "id": "gcc.dg/Wstringop-overflow-17.c  (test for warnings, line 8)" } 2020-06-01
 
 # ------------------------------------------------------------------------------------------
+# Need to xfail these in the testsuite. moxie has no sibcall md pattern yet.
+
+# eg..
+# /* { dg-do run { xfail { { amdgcn*-*-* cris-*-* crisv32-*-* csky-*-* h8300-*-* hppa*64*-*-* m32r-*-* mcore-*-* mn10300-*-* moxie*-*-* msp430*-*-* nds32*-*-* xstormy16-*-* v850*-*-* vax-*-* xtensa*-*-* } || { arm*-*-* && { ! arm32 } } } } } */
+
+{ "result": "FAIL", "id": "gcc.dg/sibcall-9.c execution test" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.dg/sibcall-10.c execution test" } 2020-06-01
+
+# ------------------------------------------------------------------------------------------
 # Set baseline failures.   These have not been investigated yet.
 
 { "result": "FAIL", "id": "gcc.dg/tree-ssa/builtin-sprintf.c execution test" } 2020-06-01
@@ -164,8 +173,6 @@
 { "result": "FAIL", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -O0 -fpic execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -O0  execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/strlenopt-81.c (test for excess errors)" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/sibcall-9.c execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/sibcall-10.c execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/pr84877.c execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/pr69973.c (test for excess errors)" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/pr69973.c (internal compiler error)" } 2020-06-01
