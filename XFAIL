@@ -105,25 +105,17 @@
 { "result": "FAIL", "id": "gcc.dg/plugin/must-tail-call-1.c -fplugin=./must_tail_call_plugin.so (test for excess errors)" } 2020-06-01
 
 # ------------------------------------------------------------------------------------------
-# In pr48542.c, the compiler fails to emit a 'ret' instruction after
-# the longjmp() in sjtest().  When the longjmp() returns, we just fall
-# through to sub() instead of returning from sjtest().
-# 
-#    0x11a4 <sjtest+72>:	ldi.l	$r1, 0x1
-#    0x11aa <sjtest+78>:	ldi.l	$r0, 0x345c
-#    0x11b0 <sjtest+84>:	jsra	0x1458 <longjmp>
-# => 0x11b6 <sub>:	lda.l	$r0, 0x349c
-#    0x11bc <sub+6>:	inc	$r0, 0x1
-#    0x11be <sub+8>:	sta.l	0x349c, $r0
+# pr48542.c is actually a bug in the newlib setjmp/longjmp implementation for moxie.
+# I'll be committing a fix to newlib shortly.
 
-{ "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -Os  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -O3 -g  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -O2  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -O1  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -O0  execution test" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -O0  execution test" } 2020-06-02
+{ "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -O1  execution test" } 2020-06-02
+{ "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -O2  execution test" } 2020-06-02
+{ "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test" } 2020-06-02
+{ "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test" } 2020-06-02
+{ "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test" } 2020-06-02
+{ "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -O3 -g  execution test" } 2020-06-02
+{ "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -Os  execution test" } 2020-06-02
 
 # ------------------------------------------------------------------------------------------
 # Set baseline failures.   These have not been investigated yet.
