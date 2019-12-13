@@ -118,6 +118,18 @@
 { "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -Os  execution test" } 2020-06-02
 
 # ------------------------------------------------------------------------------------------
+# The fprintf-2.c tests require file IO, which is not fully implemented in the
+# current gdb moxie simulator.
+
+{ "result": "FAIL", "id": "gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.c-torture/execute/fprintf-2.c   -Os  execution test" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.c-torture/execute/fprintf-2.c   -O3 -g  execution test" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.c-torture/execute/fprintf-2.c   -O2  execution test" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.c-torture/execute/fprintf-2.c   -O1  execution test" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.c-torture/execute/fprintf-2.c   -O0  execution test" } 2020-06-01
+
+# ------------------------------------------------------------------------------------------
 # Set baseline failures.   These have not been investigated yet.
 
 { "result": "FAIL", "id": "gcc.dg/tree-ssa/builtin-sprintf.c execution test" } 2020-06-01
@@ -163,13 +175,6 @@
 { "result": "FAIL", "id": "gcc.c-torture/execute/pr56982.c   -Os  execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.c-torture/execute/pr56982.c   -O1  execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.c-torture/execute/pr56982.c   -O0  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/fprintf-2.c   -Os  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/fprintf-2.c   -O3 -g  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/fprintf-2.c   -O2  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/fprintf-2.c   -O1  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/fprintf-2.c   -O0  execution test" } 2020-06-01
 { "result": "FAIL", "id": "compiler driver --help=^undocumented option(s): \"-Wall\" present in output" } 2020-06-01
 { "result": "FAIL", "id": "compiler driver -v --help option(s): \"This option lacks documentation\" absent from output" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/tree-ssa/vrp113.c scan-tree-dump vrp1 \"return 3;\"" } 2020-06-01
