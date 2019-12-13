@@ -161,6 +161,17 @@
 { "result": "FAIL", "id": "gcc.dg/sibcall-9.c execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/sibcall-10.c execution test" } 2020-06-01
 
+
+# ------------------------------------------------------------------------------------------
+# Compiler appears to be missing optimization opportunity...
+
+# /opt/moxielogic/lib64/gcc/moxie-elf/10.0.0/../../../../moxie-elf/bin/ld: /tmp/cccZiVNO.o: in function `test_local_cpy_4':
+# strlenopt-81.c:(.text+0x278): undefined reference to `test_on_line_97_not_eliminated'
+# collect2: error: ld returned 1 exit status
+
+{ "result": "FAIL", "id": "gcc.dg/strlenopt-81.c (test for excess errors)" } 2020-06-01
+
+
 # ------------------------------------------------------------------------------------------
 # Set baseline failures.   These have not been investigated yet.
 
@@ -172,7 +183,6 @@
 { "result": "FAIL", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -O1 -fpic execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -O0 -fpic execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -O0  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/strlenopt-81.c (test for excess errors)" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/pr84877.c execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/pr69973.c (test for excess errors)" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/pr69973.c (internal compiler error)" } 2020-06-01
