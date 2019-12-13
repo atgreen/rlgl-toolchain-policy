@@ -118,7 +118,7 @@
 { "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -Os  execution test" } 2020-06-02
 
 # ------------------------------------------------------------------------------------------
-# The fprintf-2.c tests require file IO, which is not fully implemented in the
+# These tests all require file IO, which is not fully implemented in the
 # current gdb moxie simulator.
 
 { "result": "FAIL", "id": "gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test" } 2020-06-01
@@ -128,6 +128,21 @@
 { "result": "FAIL", "id": "gcc.c-torture/execute/fprintf-2.c   -O2  execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.c-torture/execute/fprintf-2.c   -O1  execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.c-torture/execute/fprintf-2.c   -O0  execution test" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.c-torture/execute/user-printf.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.c-torture/execute/user-printf.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.c-torture/execute/user-printf.c   -Os  execution test" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.c-torture/execute/user-printf.c   -O3 -g  execution test" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.c-torture/execute/user-printf.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.c-torture/execute/user-printf.c   -O2  execution test" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.c-torture/execute/user-printf.c   -O1  execution test" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.c-torture/execute/user-printf.c   -O0  execution test" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.c-torture/execute/printf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.c-torture/execute/printf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.c-torture/execute/printf-2.c   -Os  execution test" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.c-torture/execute/printf-2.c   -O3 -g  execution test" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.c-torture/execute/printf-2.c   -O2  execution test" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.c-torture/execute/printf-2.c   -O1  execution test" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.c-torture/execute/printf-2.c   -O0  execution test" } 2020-06-01
 
 # ------------------------------------------------------------------------------------------
 # Set baseline failures.   These have not been investigated yet.
@@ -157,21 +172,6 @@
 { "result": "FAIL", "id": "gcc.dg/Wstringop-overflow-25.c  (test for warnings, line 318)" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/Wstringop-overflow-25.c  (test for warnings, line 317)" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/Wstringop-overflow-17.c  (test for warnings, line 8)" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/user-printf.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/user-printf.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/user-printf.c   -Os  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/user-printf.c   -O3 -g  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/user-printf.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/user-printf.c   -O2  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/user-printf.c   -O1  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/user-printf.c   -O0  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/printf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/printf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/printf-2.c   -Os  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/printf-2.c   -O3 -g  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/printf-2.c   -O2  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/printf-2.c   -O1  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/printf-2.c   -O0  execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.c-torture/execute/pr56982.c   -Os  execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.c-torture/execute/pr56982.c   -O1  execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.c-torture/execute/pr56982.c   -O0  execution test" } 2020-06-01
