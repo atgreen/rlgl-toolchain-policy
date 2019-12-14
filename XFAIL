@@ -203,6 +203,14 @@
 
 
 # ------------------------------------------------------------------------------------------
+# Need to skip this test for moxie.  No multiple set if-conversion available.
+
+# /* { dg-skip-if "Multiple set if-conversion not guaranteed on all subtargets" { "arm*-*-* avr-*-* hppa*64*-*-* s390-*-* visium-*-*" riscv*-*-* msp430-*-* } }  */
+
+{ "result": "FAIL", "id": "gcc.dg/ifcvt-4.c scan-rtl-dump ce1 \"2 true changes made\"" } 2020-06-02
+
+
+# ------------------------------------------------------------------------------------------
 # Set baseline failures.   These have not been investigated yet.
 
 { "result": "FAIL", "id": "gcc.dg/tree-ssa/builtin-sprintf.c execution test" } 2020-06-01
@@ -218,5 +226,4 @@
 { "result": "FAIL", "id": "gcc.dg/pr69973.c (internal compiler error)" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/loop-8.c scan-rtl-dump-not loop2_invariant \"without introducing a new temporary register\"" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/loop-8.c scan-rtl-dump-times loop2_invariant \"Decided\" 1" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/ifcvt-4.c scan-rtl-dump ce1 \"2 true changes made\"" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/builtin-apply2.c execution test" } 2020-06-01
