@@ -11,8 +11,11 @@
 #
 # ...which assumes the availability of a C++ compiler.  This test will
 # fail if there's no C++ compiler available.  We should fix the testsuite.
+#
+# I've submitted a bug report for this: https://gcc.gnu.org/bugzilla/show_bug.cgi?id=92941
 
 { "result": "FAIL", "id": "compiler driver -Q --help=warnings option(s): \"-Wabsolute-value[ \\t]+\\[available in C, ObjC\\]\" present in output" } 2020-06-01
+
 
 # ------------------------------------------------------------------------------------------
 # $ moxie-elf-gcc attr-vector_size.c
@@ -571,5 +574,3 @@
 { "result": "FAIL", "id": "gcc.dg/Walloca-13.c  (test for bogus messages, line 11)" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/20030612-1.c  (test for warnings, line 13)" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/cpp/defined-syshdr.c  (test for bogus messages, line 24)" } 2020-06-01
-
-
