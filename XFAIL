@@ -211,6 +211,13 @@
 
 
 # ------------------------------------------------------------------------------------------
+# Need to skip this test for moxie.
+
+{ "result": "FAIL", "id": "gcc.dg/loop-8.c scan-rtl-dump-not loop2_invariant \"without introducing a new temporary register\"" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.dg/loop-8.c scan-rtl-dump-times loop2_invariant \"Decided\" 1" } 2020-06-01
+
+
+# ------------------------------------------------------------------------------------------
 # Set baseline failures.   These have not been investigated yet.
 
 { "result": "FAIL", "id": "gcc.dg/tree-ssa/builtin-sprintf.c execution test" } 2020-06-01
@@ -224,6 +231,4 @@
 { "result": "FAIL", "id": "gcc.dg/pr84877.c execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/pr69973.c (test for excess errors)" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/pr69973.c (internal compiler error)" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/loop-8.c scan-rtl-dump-not loop2_invariant \"without introducing a new temporary register\"" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/loop-8.c scan-rtl-dump-times loop2_invariant \"Decided\" 1" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/builtin-apply2.c execution test" } 2020-06-01
