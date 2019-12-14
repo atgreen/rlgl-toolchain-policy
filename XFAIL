@@ -1,5 +1,5 @@
 # This is a Red Light Green Light policy file for the GNU moxie-elf
-# toolchain.
+# toolchain.  See https://rl.gl for details.
 
 # ------------------------------------------------------------------------------------------
 # The test file gcc/testsuite/gcc.misc-tests/help.exp contains this
@@ -38,6 +38,7 @@
 { "result": "FAIL", "id": "gcc.dg/attr-vector_size.c ILP32 (test for errors, line 37)" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/attr-vector_size.c (internal compiler error)" } 2020-06-01
 
+
 # ------------------------------------------------------------------------------------------
 # The moxie machine description doesn't include casesi or tablejump patterns, which this
 # test assumes exist.   We can either ignore this test the the test source header, or
@@ -69,6 +70,7 @@
 
 { "result": "FAIL", "id": "gcc.dg/tree-ssa/loop-1.c scan-assembler-times foo 5" } 2020-06-01
 
+
 # ------------------------------------------------------------------------------------------
 # This looks like a misaligned memory access, but I haven't investigated yet.
 
@@ -77,6 +79,7 @@
 # FAIL: gcc.dg/torture/pr37868.c   -O0  execution test
 
 { "result": "FAIL", "id": "gcc.dg/torture/pr37868.c   -O0  execution test" } 2020-06-01
+
 
 # ------------------------------------------------------------------------------------------
 # speculation barrier...
@@ -99,6 +102,7 @@
 
 { "result": "FAIL", "id": "c-c++-common/spec-barrier-1.c  -Wc++-compat  (test for excess errors)" } 2020-06-01
 
+
 # ------------------------------------------------------------------------------------------
 # Need to add sibcall_epilogue pattern to moxie machine description
 
@@ -106,6 +110,7 @@
 # /root/gcc/gcc/testsuite/gcc.dg/plugin/must-tail-call-1.c:14:10: error: cannot tail-call: machine description does not have a sibcall_epilogue instruction pattern
 
 { "result": "FAIL", "id": "gcc.dg/plugin/must-tail-call-1.c -fplugin=./must_tail_call_plugin.so (test for excess errors)" } 2020-06-01
+
 
 # ------------------------------------------------------------------------------------------
 # pr48542.c is actually a bug in the newlib setjmp/longjmp implementation for moxie.
@@ -156,6 +161,7 @@
 { "result": "FAIL", "id": "gcc.c-torture/execute/printf-2.c   -O1  execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.c-torture/execute/printf-2.c   -O0  execution test" } 2020-06-01
 
+
 # ------------------------------------------------------------------------------------------
 # These failures don't appear to be moxie related.  Check with other ports.
 
@@ -163,6 +169,7 @@
 { "result": "FAIL", "id": "gcc.dg/Wstringop-overflow-25.c  (test for warnings, line 318)" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/Wstringop-overflow-25.c  (test for warnings, line 317)" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/Wstringop-overflow-17.c  (test for warnings, line 8)" } 2020-06-01
+
 
 # ------------------------------------------------------------------------------------------
 # Need to xfail these in the testsuite. moxie has no sibcall md pattern yet.
