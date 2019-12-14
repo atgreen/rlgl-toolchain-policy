@@ -107,6 +107,9 @@
 # ------------------------------------------------------------------------------------------
 # pr48542.c is actually a bug in the newlib setjmp/longjmp implementation for moxie.
 # I'll be committing a fix to newlib shortly.
+#
+# Here's the newlib fix:
+#   https://cygwin.com/git/gitweb.cgi?p=newlib-cygwin.git;a=commit;h=31227ba53d39ec1dac19a488c967ebbe9a04c19a
 
 { "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -O0  execution test" } 2020-06-02
 { "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -O1  execution test" } 2020-06-02
