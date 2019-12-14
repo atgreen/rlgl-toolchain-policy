@@ -127,6 +127,9 @@
 { "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test" } 2020-06-02
 { "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -O3 -g  execution test" } 2020-06-02
 { "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -Os  execution test" } 2020-06-02
+{ "result": "FAIL", "id": "gcc.c-torture/execute/pr56982.c   -Os  execution test" } 2020-06-02
+{ "result": "FAIL", "id": "gcc.c-torture/execute/pr56982.c   -O1  execution test" } 2020-06-02
+{ "result": "FAIL", "id": "gcc.c-torture/execute/pr56982.c   -O0  execution test" } 2020-06-02
 
 
 # ------------------------------------------------------------------------------------------
@@ -212,6 +215,3 @@
 { "result": "FAIL", "id": "gcc.dg/cleanup-13.c execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/cleanup-12.c execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/builtin-apply2.c execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/pr56982.c   -Os  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/pr56982.c   -O1  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/pr56982.c   -O0  execution test" } 2020-06-01
