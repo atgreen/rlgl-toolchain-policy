@@ -117,9 +117,15 @@
 { "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -O3 -g  execution test" } 2020-06-02
 { "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -Os  execution test" } 2020-06-02
 
+
 # ------------------------------------------------------------------------------------------
 # These tests all require file IO, which is not fully implemented in the
 # current gdb moxie simulator.
+#
+# gdb sim bits just added:
+#   https://sourceware.org/git/gitweb.cgi?p=binutils-gdb.git;a=commit;h=fb46334198d8d4f82133033758cb75f086d864ad
+# libgloss bits as well:
+#   https://cygwin.com/git/gitweb.cgi?p=newlib-cygwin.git;a=commit;h=78b7a3b0f879715f6078720aaa07e0fb6156b586
 
 { "result": "FAIL", "id": "gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test" } 2020-06-01
