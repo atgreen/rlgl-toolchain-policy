@@ -14,7 +14,7 @@ as we work through fixing them.  We also use the rlgl output to catch
 regressions from a baseline by calling out all of the known problems
 at a certain point in time.
 
-The nightly moxie-elf GCC test runs use this policy and the hosted
+The nightly moxie-elf GCC test runs use this policy with the hosted
 rlgl service at [https://rl.gl](https://rl.gl). Results are posted to
 the gcc-testresults mailing list here:
 https://gcc.gnu.org/ml/gcc-testresults/ .  Look at recent moxie-elf
