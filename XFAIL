@@ -40,6 +40,14 @@
 
 
 # ------------------------------------------------------------------------------------------
+# These tests create a vector whose alignment exceeds the size of what
+# a 32-bit ELF object file can support.  See the attr-vector_size.c as well.
+
+{ "result": "FAIL", "id": "gcc.dg/pr69973.c (test for excess errors)" } 2020-06-02
+{ "result": "FAIL", "id": "gcc.dg/pr69973.c (internal compiler error)" } 2020-06-02
+
+
+# ------------------------------------------------------------------------------------------
 # The moxie machine description doesn't include casesi or tablejump patterns, which this
 # test assumes exist.   We can either ignore this test the the test source header, or
 # implement backend support (this is the correct option!).
@@ -229,6 +237,4 @@
 { "result": "FAIL", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -O0 -fpic execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -O0  execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/pr84877.c execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/pr69973.c (test for excess errors)" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/pr69973.c (internal compiler error)" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/builtin-apply2.c execution test" } 2020-06-01
