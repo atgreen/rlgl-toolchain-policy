@@ -195,6 +195,14 @@
 
 
 # ------------------------------------------------------------------------------------------
+# These are unwinder problems.  Need to review moxie unwinder.
+
+{ "result": "FAIL", "id": "gcc.dg/cleanup-5.c execution test" } 2020-06-02
+{ "result": "FAIL", "id": "gcc.dg/cleanup-13.c execution test" } 2020-06-02
+{ "result": "FAIL", "id": "gcc.dg/cleanup-12.c execution test" } 2020-06-02
+
+
+# ------------------------------------------------------------------------------------------
 # Set baseline failures.   These have not been investigated yet.
 
 { "result": "FAIL", "id": "gcc.dg/tree-ssa/builtin-sprintf.c execution test" } 2020-06-01
@@ -211,7 +219,4 @@
 { "result": "FAIL", "id": "gcc.dg/loop-8.c scan-rtl-dump-not loop2_invariant \"without introducing a new temporary register\"" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/loop-8.c scan-rtl-dump-times loop2_invariant \"Decided\" 1" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/ifcvt-4.c scan-rtl-dump ce1 \"2 true changes made\"" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/cleanup-5.c execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/cleanup-13.c execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/cleanup-12.c execution test" } 2020-06-01
 { "result": "FAIL", "id": "gcc.dg/builtin-apply2.c execution test" } 2020-06-01
