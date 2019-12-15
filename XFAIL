@@ -53,6 +53,7 @@
 # implement backend support (this is the correct option!).
 
 { "result": "FAIL", "id": "gcc.dg/tree-ssa/ssa-dom-thread-7.c scan-tree-dump-not dom3 \"Jumps threaded\"" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.dg/tree-ssa/ssa-dom-thread-7.c scan-tree-dump-not vrp2 \"Jumps threaded\"" } 2020-06-15
 
 
 # ------------------------------------------------------------------------------------------
