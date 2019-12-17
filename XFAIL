@@ -134,39 +134,6 @@
 
 
 # ------------------------------------------------------------------------------------------
-# These tests all require file IO, which is not fully implemented in the
-# current gdb moxie simulator.
-#
-# gdb sim bits just added:
-#   https://sourceware.org/git/gitweb.cgi?p=binutils-gdb.git;a=commit;h=fb46334198d8d4f82133033758cb75f086d864ad
-# libgloss bits as well:
-#   https://cygwin.com/git/gitweb.cgi?p=newlib-cygwin.git;a=commit;h=78b7a3b0f879715f6078720aaa07e0fb6156b586
-
-{ "result": "FAIL", "id": "gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/fprintf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/fprintf-2.c   -Os  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/fprintf-2.c   -O3 -g  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/fprintf-2.c   -O2  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/fprintf-2.c   -O1  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/fprintf-2.c   -O0  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/user-printf.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/user-printf.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/user-printf.c   -Os  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/user-printf.c   -O3 -g  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/user-printf.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/user-printf.c   -O2  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/user-printf.c   -O1  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/user-printf.c   -O0  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/printf-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/printf-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/printf-2.c   -Os  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/printf-2.c   -O3 -g  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/printf-2.c   -O2  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/printf-2.c   -O1  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.c-torture/execute/printf-2.c   -O0  execution test" } 2020-06-01
-
-
-# ------------------------------------------------------------------------------------------
 # These failures don't appear to be moxie related.  Check with other ports.
 
 { "result": "FAIL", "id": "gcc.dg/Wstringop-overflow-25.c  (test for warnings, line 319)" } 2020-06-01
