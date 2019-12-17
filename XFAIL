@@ -122,23 +122,15 @@
 
 
 # ------------------------------------------------------------------------------------------
-# pr48542.c is actually a bug in the newlib setjmp/longjmp implementation for moxie.
-# I'll be committing a fix to newlib shortly.
-#
-# Here's the newlib fix:
-#   https://cygwin.com/git/gitweb.cgi?p=newlib-cygwin.git;a=commit;h=31227ba53d39ec1dac19a488c967ebbe9a04c19a
+# Need to investigate these failures... setjmp/longjmp related?
 
-{ "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -O0  execution test" } 2020-06-02
-{ "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -O1  execution test" } 2020-06-02
-{ "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -O2  execution test" } 2020-06-02
-{ "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test" } 2020-06-02
-{ "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test" } 2020-06-02
-{ "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test" } 2020-06-02
-{ "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -O3 -g  execution test" } 2020-06-02
-{ "result": "FAIL", "id": "gcc.dg/torture/pr48542.c   -Os  execution test" } 2020-06-02
-{ "result": "FAIL", "id": "gcc.c-torture/execute/pr56982.c   -Os  execution test" } 2020-06-02
-{ "result": "FAIL", "id": "gcc.c-torture/execute/pr56982.c   -O1  execution test" } 2020-06-02
-{ "result": "FAIL", "id": "gcc.c-torture/execute/pr56982.c   -O0  execution test" } 2020-06-02
+{ "result": "FAIL", "id": "gcc.c-torture/execute/pr56982.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test" } 2020-06-17
+{ "result": "FAIL", "id": "gcc.c-torture/execute/pr56982.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test" } 2020-06-17
+{ "result": "FAIL", "id": "gcc.c-torture/execute/pr56982.c   -O3 -g  execution test" } 2020-06-17
+{ "result": "FAIL", "id": "gcc.c-torture/execute/pr56982.c   -O2  execution test" } 2020-06-17
+{ "result": "FAIL", "id": "gcc.c-torture/execute/pr56982.c   -Os  execution test" } 2020-06-17
+{ "result": "FAIL", "id": "gcc.c-torture/execute/pr56982.c   -O1  execution test" } 2020-06-17
+{ "result": "FAIL", "id": "gcc.c-torture/execute/pr56982.c   -O0  execution test" } 2020-06-17
 
 
 # ------------------------------------------------------------------------------------------
