@@ -122,15 +122,16 @@
 
 
 # ------------------------------------------------------------------------------------------
-# Need to investigate these failures... setjmp/longjmp related?
+# This was yet another bug in setjmp/longjmp,
+# fixed by https://sourceware.org/git/?p=newlib-cygwin.git;a=commit;h=b481c11e5a7eb409c76f56873d6378e7ff1e3e05
 
-{ "result": "FAIL", "id": "gcc.c-torture/execute/pr56982.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test" } 2020-06-17
-{ "result": "FAIL", "id": "gcc.c-torture/execute/pr56982.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test" } 2020-06-17
-{ "result": "FAIL", "id": "gcc.c-torture/execute/pr56982.c   -O3 -g  execution test" } 2020-06-17
-{ "result": "FAIL", "id": "gcc.c-torture/execute/pr56982.c   -O2  execution test" } 2020-06-17
-{ "result": "FAIL", "id": "gcc.c-torture/execute/pr56982.c   -Os  execution test" } 2020-06-17
-{ "result": "FAIL", "id": "gcc.c-torture/execute/pr56982.c   -O1  execution test" } 2020-06-17
-{ "result": "FAIL", "id": "gcc.c-torture/execute/pr56982.c   -O0  execution test" } 2020-06-17
+{ "result": "FAIL", "id": "gcc.c-torture/execute/pr56982.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test" } 2020-06-20
+{ "result": "FAIL", "id": "gcc.c-torture/execute/pr56982.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test" } 2020-06-20
+{ "result": "FAIL", "id": "gcc.c-torture/execute/pr56982.c   -O3 -g  execution test" } 2020-06-20
+{ "result": "FAIL", "id": "gcc.c-torture/execute/pr56982.c   -O2  execution test" } 2020-06-20
+{ "result": "FAIL", "id": "gcc.c-torture/execute/pr56982.c   -Os  execution test" } 2020-06-20
+{ "result": "FAIL", "id": "gcc.c-torture/execute/pr56982.c   -O1  execution test" } 2020-06-20
+{ "result": "FAIL", "id": "gcc.c-torture/execute/pr56982.c   -O0  execution test" } 2020-06-20
 
 
 # ------------------------------------------------------------------------------------------
