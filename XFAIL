@@ -206,3 +206,5 @@
 { "result": "FAIL", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -O3 -g  execution test" } 2020-06-15
 { "result": "FAIL", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -O2  execution test" } 2020-06-15
 { "result": "FAIL", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -O1  execution test" } 2020-06-15
+{ "result": "FAIL", "id": "gcc.dg/analyzer/sigsetjmp-5.c (test for excess errors)" } 2020-06-15
+{ "result": "FAIL", "id": "gcc.dg/analyzer/sigsetjmp-6.c (test for excess errors)" } 2020-06-15
