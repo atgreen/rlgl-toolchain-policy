@@ -14,7 +14,7 @@
 #
 # I've submitted a bug report for this: https://gcc.gnu.org/bugzilla/show_bug.cgi?id=92941
 
-{ "result": "FAIL", "id": "compiler driver -Q --help=warnings option(s): \"-Wabsolute-value[ \\t]+\\[available in C, ObjC\\]\" present in output" } 2020-06-01
+{ "result": "FAIL", "id": "compiler driver -Q --help=warnings option(s): \"-Wabsolute-value[ \\t]+\\[available in C, ObjC\\]\" present in output" } 2020-11-01
 
 
 # ------------------------------------------------------------------------------------------
@@ -31,12 +31,12 @@
 # get this ICE.   We can implement a target hook to set alignment sizes, or perhaps
 # consider a broader correction to the compiler.
 
-{ "result": "FAIL", "id": "gcc.dg/attr-vector_size.c (test for excess errors)" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/attr-vector_size.c ILP32 (test for errors, line 66)" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/attr-vector_size.c ILP32 (test for errors, line 64)" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/attr-vector_size.c ILP32 (test for errors, line 39)" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/attr-vector_size.c ILP32 (test for errors, line 37)" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/attr-vector_size.c (internal compiler error)" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.dg/attr-vector_size.c (test for excess errors)" } 2020-11-01
+{ "result": "FAIL", "id": "gcc.dg/attr-vector_size.c ILP32 (test for errors, line 66)" } 2020-11-01
+{ "result": "FAIL", "id": "gcc.dg/attr-vector_size.c ILP32 (test for errors, line 64)" } 2020-11-01
+{ "result": "FAIL", "id": "gcc.dg/attr-vector_size.c ILP32 (test for errors, line 39)" } 2020-11-01
+{ "result": "FAIL", "id": "gcc.dg/attr-vector_size.c ILP32 (test for errors, line 37)" } 2020-11-01
+{ "result": "FAIL", "id": "gcc.dg/attr-vector_size.c (internal compiler error)" } 2020-11-01
 
 
 # ------------------------------------------------------------------------------------------
@@ -52,7 +52,7 @@
 # test assumes exist.   We can either ignore this test the the test source header, or
 # implement backend support (this is the correct option!).
 
-{ "result": "FAIL", "id": "gcc.dg/tree-ssa/ssa-dom-thread-7.c scan-tree-dump-not dom3 \"Jumps threaded\"" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.dg/tree-ssa/ssa-dom-thread-7.c scan-tree-dump-not dom3 \"Jumps threaded\"" } 2020-11-01
 { "result": "FAIL", "id": "gcc.dg/tree-ssa/ssa-dom-thread-7.c scan-tree-dump-not vrp2 \"Jumps threaded\"" } 2020-06-15
 
 
@@ -66,8 +66,8 @@
 # test case:
 # /* { dg-skip-if "too big data segment" { visium-*-* moxie-*-* } } */
 
-{ "result": "FAIL", "id": "gcc.dg/tree-ssa/loop-interchange-1b.c execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/tree-ssa/loop-interchange-1.c execution test" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.dg/tree-ssa/loop-interchange-1b.c execution test" } 2020-11-01
+{ "result": "FAIL", "id": "gcc.dg/tree-ssa/loop-interchange-1.c execution test" } 2020-11-01
 
 
 # ------------------------------------------------------------------------------------------
@@ -77,7 +77,7 @@
 # moxie places the target in a register, so we should really be checking for
 # 5 jsr instructions.
 
-{ "result": "FAIL", "id": "gcc.dg/tree-ssa/loop-1.c scan-assembler-times foo 5" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.dg/tree-ssa/loop-1.c scan-assembler-times foo 5" } 2020-11-01
 
 
 # ------------------------------------------------------------------------------------------
@@ -87,7 +87,7 @@
 # sim-core.c:424: assertion failed - (addr & (nr_bytes - 1)) == 0
 # FAIL: gcc.dg/torture/pr37868.c   -O0  execution test
 
-{ "result": "FAIL", "id": "gcc.dg/torture/pr37868.c   -O0  execution test" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.dg/torture/pr37868.c   -O0  execution test" } 2020-11-01
 
 
 # ------------------------------------------------------------------------------------------
@@ -109,7 +109,7 @@
 #undef  TARGET_HAVE_SPECULATION_SAFE_VALUE
 #define TARGET_HAVE_SPECULATION_SAFE_VALUE speculation_safe_value_not_needed
 
-{ "result": "FAIL", "id": "c-c++-common/spec-barrier-1.c  -Wc++-compat  (test for excess errors)" } 2020-06-01
+{ "result": "FAIL", "id": "c-c++-common/spec-barrier-1.c  -Wc++-compat  (test for excess errors)" } 2020-11-01
 
 
 # ------------------------------------------------------------------------------------------
@@ -118,7 +118,7 @@
 # /root/gcc/gcc/testsuite/gcc.dg/plugin/must-tail-call-1.c: In function 'caller':
 # /root/gcc/gcc/testsuite/gcc.dg/plugin/must-tail-call-1.c:14:10: error: cannot tail-call: machine description does not have a sibcall_epilogue instruction pattern
 
-{ "result": "FAIL", "id": "gcc.dg/plugin/must-tail-call-1.c -fplugin=./must_tail_call_plugin.so (test for excess errors)" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.dg/plugin/must-tail-call-1.c -fplugin=./must_tail_call_plugin.so (test for excess errors)" } 2020-11-01
 
 
 # ------------------------------------------------------------------------------------------
@@ -137,10 +137,10 @@
 # ------------------------------------------------------------------------------------------
 # These failures don't appear to be moxie related.  Check with other ports.
 
-{ "result": "FAIL", "id": "gcc.dg/Wstringop-overflow-25.c  (test for warnings, line 319)" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/Wstringop-overflow-25.c  (test for warnings, line 318)" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/Wstringop-overflow-25.c  (test for warnings, line 317)" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/Wstringop-overflow-17.c  (test for warnings, line 8)" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.dg/Wstringop-overflow-25.c  (test for warnings, line 319)" } 2020-11-01
+{ "result": "FAIL", "id": "gcc.dg/Wstringop-overflow-25.c  (test for warnings, line 318)" } 2020-11-01
+{ "result": "FAIL", "id": "gcc.dg/Wstringop-overflow-25.c  (test for warnings, line 317)" } 2020-11-01
+{ "result": "FAIL", "id": "gcc.dg/Wstringop-overflow-17.c  (test for warnings, line 8)" } 2020-11-01
 
 
 # ------------------------------------------------------------------------------------------
@@ -149,8 +149,8 @@
 # eg..
 # /* { dg-do run { xfail { { amdgcn*-*-* cris-*-* crisv32-*-* csky-*-* h8300-*-* hppa*64*-*-* m32r-*-* mcore-*-* mn10300-*-* moxie*-*-* msp430*-*-* nds32*-*-* xstormy16-*-* v850*-*-* vax-*-* xtensa*-*-* } || { arm*-*-* && { ! arm32 } } } } } */
 
-{ "result": "FAIL", "id": "gcc.dg/sibcall-9.c execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/sibcall-10.c execution test" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.dg/sibcall-9.c execution test" } 2020-11-01
+{ "result": "FAIL", "id": "gcc.dg/sibcall-10.c execution test" } 2020-11-01
 
 
 # ------------------------------------------------------------------------------------------
@@ -160,7 +160,7 @@
 # strlenopt-81.c:(.text+0x278): undefined reference to `test_on_line_97_not_eliminated'
 # collect2: error: ld returned 1 exit status
 
-{ "result": "FAIL", "id": "gcc.dg/strlenopt-81.c (test for excess errors)" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.dg/strlenopt-81.c (test for excess errors)" } 2020-11-01
 
 
 # ------------------------------------------------------------------------------------------
@@ -182,23 +182,23 @@
 # ------------------------------------------------------------------------------------------
 # Need to skip this test for moxie.
 
-{ "result": "FAIL", "id": "gcc.dg/loop-8.c scan-rtl-dump-not loop2_invariant \"without introducing a new temporary register\"" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/loop-8.c scan-rtl-dump-times loop2_invariant \"Decided\" 1" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.dg/loop-8.c scan-rtl-dump-not loop2_invariant \"without introducing a new temporary register\"" } 2020-11-01
+{ "result": "FAIL", "id": "gcc.dg/loop-8.c scan-rtl-dump-times loop2_invariant \"Decided\" 1" } 2020-11-01
 
 
 # ------------------------------------------------------------------------------------------
 # Set baseline failures.   These have not been investigated yet.
 
-{ "result": "FAIL", "id": "gcc.dg/tree-ssa/builtin-sprintf.c execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none -fpic execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -Os -fpic execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -O3 -g -fpic execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -O2 -fpic execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -O1 -fpic execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -O0 -fpic execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -O0  execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/pr84877.c execution test" } 2020-06-01
-{ "result": "FAIL", "id": "gcc.dg/builtin-apply2.c execution test" } 2020-06-01
+{ "result": "FAIL", "id": "gcc.dg/tree-ssa/builtin-sprintf.c execution test" } 2020-11-01
+{ "result": "FAIL", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none -fpic execution test" } 2020-11-01
+{ "result": "FAIL", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -Os -fpic execution test" } 2020-11-01
+{ "result": "FAIL", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -O3 -g -fpic execution test" } 2020-11-01
+{ "result": "FAIL", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -O2 -fpic execution test" } 2020-11-01
+{ "result": "FAIL", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -O1 -fpic execution test" } 2020-11-01
+{ "result": "FAIL", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -O0 -fpic execution test" } 2020-11-01
+{ "result": "FAIL", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -O0  execution test" } 2020-11-01
+{ "result": "FAIL", "id": "gcc.dg/pr84877.c execution test" } 2020-11-01
+{ "result": "FAIL", "id": "gcc.dg/builtin-apply2.c execution test" } 2020-11-01
 { "result": "FAIL", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects -fpic execution test" } 2020-06-15
 { "result": "FAIL", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test" } 2020-06-15
 { "result": "FAIL", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test" } 2020-06-15
