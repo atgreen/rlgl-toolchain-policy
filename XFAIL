@@ -43,8 +43,8 @@
 # These tests create a vector whose alignment exceeds the size of what
 # a 32-bit ELF object file can support.  See the attr-vector_size.c as well.
 
-{ "result": "FAIL", "id": "gcc.dg/pr69973.c (test for excess errors)" } 2020-06-02
-{ "result": "FAIL", "id": "gcc.dg/pr69973.c (internal compiler error)" } 2020-06-02
+{ "result": "FAIL", "id": "gcc.dg/pr69973.c (test for excess errors)" } 2020-11-02
+{ "result": "FAIL", "id": "gcc.dg/pr69973.c (internal compiler error)" } 2020-11-02
 
 
 # ------------------------------------------------------------------------------------------
@@ -166,9 +166,9 @@
 # ------------------------------------------------------------------------------------------
 # These are unwinder problems.  Need to review moxie unwinder.
 
-{ "result": "FAIL", "id": "gcc.dg/cleanup-5.c execution test" } 2020-06-02
-{ "result": "FAIL", "id": "gcc.dg/cleanup-13.c execution test" } 2020-06-02
-{ "result": "FAIL", "id": "gcc.dg/cleanup-12.c execution test" } 2020-06-02
+{ "result": "FAIL", "id": "gcc.dg/cleanup-5.c execution test" } 2020-11-02
+{ "result": "FAIL", "id": "gcc.dg/cleanup-13.c execution test" } 2020-11-02
+{ "result": "FAIL", "id": "gcc.dg/cleanup-12.c execution test" } 2020-11-02
 
 
 # ------------------------------------------------------------------------------------------
@@ -176,7 +176,7 @@
 
 # /* { dg-skip-if "Multiple set if-conversion not guaranteed on all subtargets" { "arm*-*-* avr-*-* hppa*64*-*-* s390-*-* visium-*-*" riscv*-*-* msp430-*-* } }  */
 
-{ "result": "FAIL", "id": "gcc.dg/ifcvt-4.c scan-rtl-dump ce1 \"2 true changes made\"" } 2020-06-02
+{ "result": "FAIL", "id": "gcc.dg/ifcvt-4.c scan-rtl-dump ce1 \"2 true changes made\"" } 2020-11-02
 
 
 # ------------------------------------------------------------------------------------------
@@ -199,12 +199,46 @@
 { "result": "FAIL", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -O0  execution test" } 2020-11-01
 { "result": "FAIL", "id": "gcc.dg/pr84877.c execution test" } 2020-11-01
 { "result": "FAIL", "id": "gcc.dg/builtin-apply2.c execution test" } 2020-11-01
-{ "result": "FAIL", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects -fpic execution test" } 2020-06-15
-{ "result": "FAIL", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test" } 2020-06-15
-{ "result": "FAIL", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test" } 2020-06-15
-{ "result": "FAIL", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -Os  execution test" } 2020-06-15
-{ "result": "FAIL", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -O3 -g  execution test" } 2020-06-15
-{ "result": "FAIL", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -O2  execution test" } 2020-06-15
-{ "result": "FAIL", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -O1  execution test" } 2020-06-15
-{ "result": "FAIL", "id": "gcc.dg/analyzer/sigsetjmp-5.c (test for excess errors)" } 2020-06-15
-{ "result": "FAIL", "id": "gcc.dg/analyzer/sigsetjmp-6.c (test for excess errors)" } 2020-06-15
+
+# These baseline XFAIL results were generated with rlgl's new 'baseline' command.
+# They have not been investigated, and are here just to track for regressions.
+
+{ "report": "dejagnu", "result": "FAIL", "host": "x86_64-pc-linux-gnu", "target": "moxie-unknown-elf", "id": "gcc.dg/tree-ssa/ssa-dom-thread-7.c scan-tree-dump-not vrp2 \"Jumps threaded\"" }
+{ "report": "dejagnu", "result": "FAIL", "host": "x86_64-pc-linux-gnu", "target": "moxie-unknown-elf", "id": "gcc.dg/tree-ssa/pr93121-1.c scan-tree-dump-times optimized \"m = -9103311533965288635;\" 1" }
+{ "report": "dejagnu", "result": "FAIL", "host": "x86_64-pc-linux-gnu", "target": "moxie-unknown-elf", "id": "gcc.dg/tree-ssa/pr93121-1.c scan-tree-dump-times optimized \"l = 23365;\" 1" }
+{ "report": "dejagnu", "result": "FAIL", "host": "x86_64-pc-linux-gnu", "target": "moxie-unknown-elf", "id": "gcc.dg/tree-ssa/pr93121-1.c scan-tree-dump-times optimized \"k = 10824;\" 1" }
+{ "report": "dejagnu", "result": "FAIL", "host": "x86_64-pc-linux-gnu", "target": "moxie-unknown-elf", "id": "gcc.dg/tree-ssa/pr93121-1.c scan-tree-dump-times optimized \"j = -30108;\" 1" }
+{ "report": "dejagnu", "result": "FAIL", "host": "x86_64-pc-linux-gnu", "target": "moxie-unknown-elf", "id": "gcc.dg/tree-ssa/pr93121-1.c scan-tree-dump-times optimized \"i = -32342;\" 1" }
+{ "report": "dejagnu", "result": "FAIL", "host": "x86_64-pc-linux-gnu", "target": "moxie-unknown-elf", "id": "gcc.dg/tree-ssa/pr93121-1.c scan-tree-dump-times optimized \"h = 709385029;\" 1" }
+{ "report": "dejagnu", "result": "FAIL", "host": "x86_64-pc-linux-gnu", "target": "moxie-unknown-elf", "id": "gcc.dg/tree-ssa/pr93121-1.c scan-tree-dump-times optimized \"g = -2119529884;\" 1" }
+{ "report": "dejagnu", "result": "FAIL", "host": "x86_64-pc-linux-gnu", "target": "moxie-unknown-elf", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -Os  execution test" }
+{ "report": "dejagnu", "result": "FAIL", "host": "x86_64-pc-linux-gnu", "target": "moxie-unknown-elf", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -O3 -g  execution test" }
+{ "report": "dejagnu", "result": "FAIL", "host": "x86_64-pc-linux-gnu", "target": "moxie-unknown-elf", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects -fpic execution test" }
+{ "report": "dejagnu", "result": "FAIL", "host": "x86_64-pc-linux-gnu", "target": "moxie-unknown-elf", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test" }
+{ "report": "dejagnu", "result": "FAIL", "host": "x86_64-pc-linux-gnu", "target": "moxie-unknown-elf", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test" }
+{ "report": "dejagnu", "result": "FAIL", "host": "x86_64-pc-linux-gnu", "target": "moxie-unknown-elf", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -O2  execution test" }
+{ "report": "dejagnu", "result": "FAIL", "host": "x86_64-pc-linux-gnu", "target": "moxie-unknown-elf", "id": "gcc.dg/torture/stackalign/builtin-apply-2.c   -O1  execution test" }
+{ "report": "dejagnu", "result": "FAIL", "host": "x86_64-pc-linux-gnu", "target": "moxie-unknown-elf", "id": "gcc.dg/torture/pr95248.c   -Os  execution test" }
+{ "report": "dejagnu", "result": "FAIL", "host": "x86_64-pc-linux-gnu", "target": "moxie-unknown-elf", "id": "gcc.dg/torture/pr95248.c   -O3 -g  execution test" }
+{ "report": "dejagnu", "result": "FAIL", "host": "x86_64-pc-linux-gnu", "target": "moxie-unknown-elf", "id": "gcc.dg/torture/pr95248.c   -O3 -fomit-frame-pointer -funroll-loops -fpeel-loops -ftracer -finline-functions  execution test" }
+{ "report": "dejagnu", "result": "FAIL", "host": "x86_64-pc-linux-gnu", "target": "moxie-unknown-elf", "id": "gcc.dg/torture/pr95248.c   -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test" }
+{ "report": "dejagnu", "result": "FAIL", "host": "x86_64-pc-linux-gnu", "target": "moxie-unknown-elf", "id": "gcc.dg/torture/pr95248.c   -O2  execution test" }
+{ "report": "dejagnu", "result": "FAIL", "host": "x86_64-pc-linux-gnu", "target": "moxie-unknown-elf", "id": "gcc.dg/torture/pr95248.c   -O1  execution test" }
+{ "report": "dejagnu", "result": "FAIL", "host": "x86_64-pc-linux-gnu", "target": "moxie-unknown-elf", "id": "gcc.dg/torture/pr95248.c   -O0  execution test" }
+{ "report": "dejagnu", "result": "FAIL", "host": "x86_64-pc-linux-gnu", "target": "moxie-unknown-elf", "id": "gcc.dg/tanhbysinh.c scan-tree-dump optimized \"coshl \"" }
+{ "report": "dejagnu", "result": "FAIL", "host": "x86_64-pc-linux-gnu", "target": "moxie-unknown-elf", "id": "gcc.dg/tanhbysinh.c scan-tree-dump optimized \"coshf \"" }
+{ "report": "dejagnu", "result": "FAIL", "host": "x86_64-pc-linux-gnu", "target": "moxie-unknown-elf", "id": "gcc.dg/strlenopt-55.c scan-tree-dump-times optimized \"call_in_true_branch_not_eliminated\" 0" }
+{ "report": "dejagnu", "result": "FAIL", "host": "x86_64-pc-linux-gnu", "target": "moxie-unknown-elf", "id": "gcc.dg/strlenopt-55.c scan-tree-dump-times gimple \"memcmp\" 0" }
+{ "report": "dejagnu", "result": "FAIL", "host": "x86_64-pc-linux-gnu", "target": "moxie-unknown-elf", "id": "gcc.dg/sinhovercosh-1.c scan-tree-dump-times optimized \"tanhl \" 1" }
+{ "report": "dejagnu", "result": "FAIL", "host": "x86_64-pc-linux-gnu", "target": "moxie-unknown-elf", "id": "gcc.dg/sinhovercosh-1.c scan-tree-dump-times optimized \"tanhf \" 1" }
+{ "report": "dejagnu", "result": "FAIL", "host": "x86_64-pc-linux-gnu", "target": "moxie-unknown-elf", "id": "gcc.dg/sinatan-2.c scan-tree-dump-not optimized \"sinl \"" }
+{ "report": "dejagnu", "result": "FAIL", "host": "x86_64-pc-linux-gnu", "target": "moxie-unknown-elf", "id": "gcc.dg/sinatan-2.c scan-tree-dump-not optimized \"sinf \"" }
+{ "report": "dejagnu", "result": "FAIL", "host": "x86_64-pc-linux-gnu", "target": "moxie-unknown-elf", "id": "gcc.dg/sinatan-2.c scan-tree-dump-not optimized \"sin \"" }
+{ "report": "dejagnu", "result": "FAIL", "host": "x86_64-pc-linux-gnu", "target": "moxie-unknown-elf", "id": "gcc.dg/sinatan-2.c scan-tree-dump-not optimized \"cosl \"" }
+{ "report": "dejagnu", "result": "FAIL", "host": "x86_64-pc-linux-gnu", "target": "moxie-unknown-elf", "id": "gcc.dg/sinatan-2.c scan-tree-dump-not optimized \"cosf \"" }
+{ "report": "dejagnu", "result": "FAIL", "host": "x86_64-pc-linux-gnu", "target": "moxie-unknown-elf", "id": "gcc.dg/sinatan-2.c scan-tree-dump-not optimized \"cos \"" }
+{ "report": "dejagnu", "result": "FAIL", "host": "x86_64-pc-linux-gnu", "target": "moxie-unknown-elf", "id": "gcc.dg/sinatan-2.c scan-tree-dump-not optimized \"atanl \"" }
+{ "report": "dejagnu", "result": "FAIL", "host": "x86_64-pc-linux-gnu", "target": "moxie-unknown-elf", "id": "gcc.dg/sinatan-2.c scan-tree-dump-not optimized \"atanf \"" }
+{ "report": "dejagnu", "result": "FAIL", "host": "x86_64-pc-linux-gnu", "target": "moxie-unknown-elf", "id": "gcc.dg/sinatan-2.c scan-tree-dump-not optimized \"atan \"" }
+{ "report": "dejagnu", "result": "FAIL", "host": "x86_64-pc-linux-gnu", "target": "moxie-unknown-elf", "id": "gcc.dg/Wstringop-overflow-25.c pr92814 (test for warnings, line 378)" }
+{ "report": "dejagnu", "result": "FAIL", "host": "x86_64-pc-linux-gnu", "target": "moxie-unknown-elf", "id": "gcc.dg/analyzer/pr93032-mztools.c (test for excess errors)" }
